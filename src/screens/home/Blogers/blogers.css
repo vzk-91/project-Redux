@@ -1,0 +1,43 @@
+.blogers {
+    width: 25%;
+    max-height:  520px;
+    border: 1px solid burlywood;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+ }
+
+ .item-bloger{
+    display: flex;
+    width: 95%;
+    margin: 5px auto;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    
+}
+
+.item-bloger:hover{
+    background-color: brown;
+    z-index: 2;
+    width: 100%;
+}
+
+.phot {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+
+}
+
+h2{
+    margin: 10px auto;
+}
+
+.spiner{
+    text-align: right;
+    margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+.contentpost {
+    width: 70%;
+    flex-direction: column;
+    max-height: 520px;
+    overflow: auto;
+    text-align: center;
+}
+
+
+
+.item:hover{
+    
+    width: 96%;
+    border: 2px solid burlywood;
+    
+
+} 

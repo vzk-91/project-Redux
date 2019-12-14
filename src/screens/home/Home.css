@@ -1,0 +1,18 @@
+.mainhome {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+    color: white;
+  }
+  html{
+    color: white;
+    font-family: 'Kalam', cursive;
+  }
+
+  body{
+    background-color: #49312B
+  }

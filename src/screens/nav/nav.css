@@ -1,0 +1,24 @@
+.nav {
+    width: 95%;
+    border: 1px  solid burlywood;
+    justify-content: flex-end;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #895D49;
+    color: wheat;
+
+}
+
+ .nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: wheat;
+}
+
+.active{
+    color: black;
+}
