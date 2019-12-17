@@ -19,7 +19,7 @@ console.log(posts,id)
                 dispatch(postsFetchAction(data))
                 dispatch(spinnerAction())
             });
-    }, [])
+    }, [posts])
     
 
     const removePost = (itemId)=>{
@@ -32,7 +32,7 @@ console.log(posts,id)
             {
                 posts.map((item) => {
                     return <div className='item' key={item.id}>
-                        <div className='title'> <p>{item.author}</p>  <p>{item.title}</p>{id && <Button  onClick={()=> removePost(item.id)}  className='remove'> &times;</Button>}  </div>
+                        <div className='title'> <p>{item.author}</p>  <p>{item.title}</p>{id && <Button variant="danger" onClick={()=> removePost(item.id)}  className='remove'> &times;</Button>}  </div>
                         <div className='discription'> {item.description}</div>
                     </div>
                 })

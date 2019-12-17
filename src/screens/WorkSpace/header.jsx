@@ -12,7 +12,7 @@ const Header = ({handleShow, name, id}) => {
         <p className="name">{name}</p>
         </div>
 
-        <Button variant="dark" onClick={()=>{id ? handleShow() : alert("Not Logined")}}>
+        <Button variant="dark" onClick={handleShow}>
             New Post
     </Button>
     </div>

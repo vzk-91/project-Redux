@@ -4,16 +4,15 @@ import { post } from '../../api/index';
 import { Button, Modal, Form } from 'react-bootstrap';
 import {newPostAction} from '../../actions'
 
-const ModalWindow = ({ show, handleClose, name }) => {
+const ModalWindow = ({ show, handleClose, name ,id}) => {
     const { state, dispatch } = useContext(context)
     const { newPost } = state.workspacePage;
-    const {id} =state.userID;
     const { description, title, } = newPost;
     newPost.author = name;
     newPost.personId = id;
 
     const onSubmitForm = () => {
-        post(newPost)
+        post(newPost);
     }
 
     const hendleFormChange = (event) => {
