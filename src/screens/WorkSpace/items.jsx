@@ -13,20 +13,13 @@ const Items = ({id}) => {
     const {loading} = state.spinner
 
     
-
+console.log(posts,id)
     useEffect(() => {
-        if (id) {
             getPostById(id).then(function (data) {
                 dispatch(postsFetchAction(data))
                 dispatch(spinnerAction())
             });
-        } else {
-            getPost().then(function (data) {
-                dispatch(postsFetchAction(data))
-                dispatch(spinnerAction())
-            });
-        }
-    }, [id])
+    }, [])
     
 
     const removePost = (itemId)=>{

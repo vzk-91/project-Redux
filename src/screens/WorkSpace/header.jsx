@@ -9,7 +9,7 @@ const Header = ({handleShow, name, id}) => {
             <div className="photo">
                 <img src="" alt="" />
             </div>
-        <p className="name">{name ? name : "workspace"}</p>
+        <p className="name">{name}</p>
         </div>
 
         <Button variant="dark" onClick={()=>{id ? handleShow() : alert("Not Logined")}}>

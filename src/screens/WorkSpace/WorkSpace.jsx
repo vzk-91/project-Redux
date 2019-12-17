@@ -4,15 +4,15 @@ import './workspace.css'
 import Items from './items';
 import ModalWindow from './Modal';
 import Header from './header'
-import { byId } from '../../api';
+import { byId,getPost } from '../../api';
 import Storage from '../../services/storage'
-import {getNameAction,modalShowAction,modalHideAction} from '../../actions'
+import {getNameAction,modalShowAction,modalHideAction,postsFetchAction} from '../../actions'
 
 
 const WorkSpace = () => {
     const { state, dispatch } = useContext(context)
     const {name, modalShow} = state.workspacePage;
-    const {id} =state.userID
+    const id = Storage.get('user').id;
 
     const handleShow = () =>  dispatch(modalShowAction())
     const handleClose =() => dispatch(modalHideAction())
@@ -21,7 +21,8 @@ const WorkSpace = () => {
         const user = Storage.get('user');
         if (user) {
             byId(user.id).then(data => {
-                dispatch(getNameAction(data))
+                dispatch(getNameAction(data));
+                
             })
         }
     }, [])

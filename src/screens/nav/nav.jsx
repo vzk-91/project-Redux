@@ -13,19 +13,19 @@ const Navigate = () => {
     return (
         <Nav fill variant="tabs"  >
             <Nav.Item>
-                <Nav.Link href="/home" >Home</Nav.Link>
+                <Nav.Link href="#/home" >Home</Nav.Link>
             </Nav.Item>
             {!state.userID.id ? <Nav.Item>
-                <Nav.Link href="/login"> Log In</Nav.Link>
+                <Nav.Link href="#/login"> Log In</Nav.Link>
             </Nav.Item> : 
              <Nav.Item>
-                <Nav.Link href="/logout"> Log Out</Nav.Link>
+                <Nav.Link href="#/logout"> Log Out</Nav.Link>
             </Nav.Item> }
             <Nav.Item>
-                <Nav.Link href="/registration" >Registration</Nav.Link>
+                <Nav.Link href="#/registration" >Registration</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/workspace" >Post</Nav.Link>
+                {state.userID.id &&<Nav.Link href="#/workspace" >WorkSpace</Nav.Link>}
             </Nav.Item>
         </Nav>
 

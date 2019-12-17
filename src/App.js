@@ -5,7 +5,7 @@ import Navigate from './screens/nav/nav';
 import Registration from './screens/Registration/Registration';
 import WorkSpace from './screens/WorkSpace/WorkSpace';
 import Footer from './screens/Footer/Footer';
-import {BrowserRouter, Route,Router } from 'react-router-dom';
+import {BrowserRouter, Route,Router,HashRouter } from 'react-router-dom';
 import context from './context/context';
 import Storage from './services/storage'
 import './App.css';
@@ -26,9 +26,9 @@ function App(props) {
             }
         }
   , [])
-  
+  console.log(state)
   return (
-  <BrowserRouter>
+  <HashRouter>
     <context.Provider value={{state,dispatch}}>
     <div className="App">
       <Navigate  id={id} />
@@ -40,7 +40,7 @@ function App(props) {
       <Route  path='/home'  render={()=> <Footer/>}/>
     </div>
     </context.Provider>
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 

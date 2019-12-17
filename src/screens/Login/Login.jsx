@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import context from '../../context/context'
 import { Button, Form } from 'react-bootstrap';
-import { login } from '../../api/index';
+import { login,getPost } from '../../api/index';
 import Storage from '../../services/storage';
-import {loginAction,idAction} from '../../actions'
+import {loginAction,idAction,postsFetchAction} from '../../actions'
 
 
 import './login.css'
@@ -25,14 +25,17 @@ const Login = (props) => {
         const info = ({ token: data.id, id: data.userId })
         Storage.set('user', info)
           dispatch(idAction(data))
-          props.history.push('/home')
+          getPost().then(function (data) {
+            dispatch(postsFetchAction(data))
+        });
+          props.history.push('/workspace')
         }
         )
         .catch(error => {
         console.log(error)
       })
   }
-
+console.log(state)
   const hendleFormChange = (event) => {
     dispatch(loginAction(event, loginData))
   }

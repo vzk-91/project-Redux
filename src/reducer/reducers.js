@@ -15,7 +15,7 @@ const reducers = combineReducers({
     registrationPage : registrationPageReducer,
     workspacePage : workspacePageReducer,
     spinner : spinerReducer,
-    userID : userIDReducer
+    userID : userIDReducer,
 })
 
 export default reducers;

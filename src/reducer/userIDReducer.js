@@ -9,6 +9,11 @@ const userIDReducer = (state = initialState,action) =>{
                                 ...state,
                                 id : action.payload
                             }
+                            case "REMOVE_ID" :
+                                return{
+                                    ...state,
+                                    id : ""
+                                }
             default:
                 return state;
 }

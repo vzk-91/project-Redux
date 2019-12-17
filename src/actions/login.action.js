@@ -8,7 +8,7 @@ export const loginAction = (event,data) =>{
 
 export const logOutAction = () =>{
     return {
-        type: 'LOGOUT' 
+        type: 'REMOVE_ID' 
     }
 }
 

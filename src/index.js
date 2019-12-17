@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './store/store'
 
-let rerender = (state) =>{{
+ export let rerender = (state) =>{{
     ReactDOM.render(<App state={state} dispatch={store.dispatch.bind(store)} />, document.getElementById('root'));
 }}
 
@@ -14,7 +14,6 @@ store.subscribe(()=>{
     let state = store.getState()
     rerender(state)
 })
-//let state = store.getState()
-// ReactDOM.render(<App state={state} dispatch={store.dispatch.bind(store)} />, document.getElementById('root'));
+
 serviceWorker.unregister();
 
