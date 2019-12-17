@@ -17,7 +17,7 @@ const Posts = () => {
             dispatch(postsFetchAction(data))
             dispatch(spinnerAction())
       });
-  },[])
+  },[posts])
   
     return(
 
